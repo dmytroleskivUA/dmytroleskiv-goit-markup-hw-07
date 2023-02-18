@@ -93,26 +93,17 @@
   /* OTHER */
 
   --transition-anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --indent: 24px;
+
+  /* --indent: 24px;
   --items: 4;
-
-
-
-  /* Breakpoints */
-
-  --phone-screen: 480px;
-  --tablet-screen: 768px;
-  --desktop-screen: 1200px;
-
-
-
+ 
+ */
 
 }
 
 
-
-
 /* Base styles */
+
 
 *,
 *::before,
@@ -148,7 +139,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-
 }
 
 ul,
@@ -209,6 +199,7 @@ button {
 
 
 
+
 .container {
 
   /* 320px <= phone screen <= infinity */
@@ -223,8 +214,8 @@ button {
     padding-right: 15px;
     padding-left: 15px;
    */
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 
 }
 
@@ -241,7 +232,6 @@ button {
     max-width: 1158px;
   }
 }
-
 
 .title {
 
@@ -597,18 +587,20 @@ button {
   background-color: var(--portfolio-filter-button-bg-cl);
 }
 
+
 .team-list {
   display: flex;
   margin-top: 72px;
 }
 
-.team-list>.item {
+.team-item {
   flex-basis: calc(100% / 4);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-bg-cl);
+  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%), 0px 2px 1px rgb(46 47 66 / 8%);
 }
 
-@media screen and .team-list>.item:not(:last-child) {
+.team-list>.team-item:not(:last-child) {
   margin-right: 24px;
 }
 
@@ -751,9 +743,9 @@ button {
 }
 
 .btn-portfolio {
-  border: 1px solid var(--borders-light-cl);
-  background-color: var(--portfolio-filter-button-bg-cl);
   color: var(--blue-txt-cl);
+  background-color: var(--portfolio-filter-button-bg-cl);
+  border: 1px solid var(--borders-light-cl);
 
   transition: color var(--transition-anim-fast), background-color var(--transition-anim-fast),
     border-color var(--transition-anim-fast), box-shadow var(--transition-anim-fast);
@@ -762,9 +754,9 @@ button {
 .btn-portfolio.current,
 .btn-portfolio:hover,
 .btn-portfolio:focus {
-  border-color: var(--accent-txt-bg-cl);
-  background-color: var(--accent-txt-bg-cl);
   color: var(--portfolio-filter-button-bg-cl);
+  background-color: var(--accent-txt-bg-cl);
+  border-color: var(--accent-txt-bg-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -935,7 +927,7 @@ button {
 
 .footer-sbc-form {
   display: flex;
-  gap: var(--card-col-gap);
+  gap: 24px;
   align-items: center;
 }
 
