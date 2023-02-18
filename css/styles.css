@@ -93,17 +93,26 @@
   /* OTHER */
 
   --transition-anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* --indent: 24px;
+  --indent: 24px;
   --items: 4;
- 
- */
+
+
+
+  /* Breakpoints */
+
+  --phone-screen: 480px;
+  --tablet-screen: 768px;
+  --desktop-screen: 1200px;
+
+
+
 
 }
 
 
-/* Base styles */
 
+
+/* Base styles */
 
 *,
 *::before,
@@ -139,6 +148,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+
 }
 
 ul,
@@ -185,19 +195,53 @@ button {
 
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
 }
 
-.container {
-  width: 1158px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  /* outline: 2px solid red;
-    outline-offset: -2px; */
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
+
+
+
+.container {
+
+  /* 320px <= phone screen <= infinity */
+
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  /* margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+   */
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+}
+
+/* 768px <= tablet screen <= infinity */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+
+/* 1200px <= desktop screen <= infinity */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
 
 .title {
 
@@ -564,7 +608,7 @@ button {
   background-color: var(--main-bg-cl);
 }
 
-.team-list>.item:not(:last-child) {
+@media screen and .team-list>.item:not(:last-child) {
   margin-right: 24px;
 }
 
@@ -707,9 +751,9 @@ button {
 }
 
 .btn-portfolio {
-  color: var(--blue-txt-cl);
-  background-color: var(--portfolio-filter-button-bg-cl);
   border: 1px solid var(--borders-light-cl);
+  background-color: var(--portfolio-filter-button-bg-cl);
+  color: var(--blue-txt-cl);
 
   transition: color var(--transition-anim-fast), background-color var(--transition-anim-fast),
     border-color var(--transition-anim-fast), box-shadow var(--transition-anim-fast);
@@ -718,9 +762,9 @@ button {
 .btn-portfolio.current,
 .btn-portfolio:hover,
 .btn-portfolio:focus {
-  color: var(--portfolio-filter-button-bg-cl);
-  background-color: var(--accent-txt-bg-cl);
   border-color: var(--accent-txt-bg-cl);
+  background-color: var(--accent-txt-bg-cl);
+  color: var(--portfolio-filter-button-bg-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -891,7 +935,7 @@ button {
 
 .footer-sbc-form {
   display: flex;
-  gap: 24px;
+  gap: var(--card-col-gap);
   align-items: center;
 }
 
