@@ -1,0 +1,33 @@
+.subtitle {
+    margin-bottom: 8px;
+    color: var(--primary-text-cl);
+    font-weight: 700px;
+    font-size: 36px;
+    line-height: calc(40/36);
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .subtitile {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: calc(24/20);
+    }
+}
+
+.text {
+    font-weight: 500;
+    margin-top: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 1200px) {
+    .text {
+        font-weight: 400;
+    }
+}
