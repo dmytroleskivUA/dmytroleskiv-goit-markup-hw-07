@@ -37,6 +37,17 @@
           <span class="header-logo-accent">Web</span>Studio
         </a>
 
+        <button
+          class="btn menu-toggle js-open-menu"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="menu-toggle-icon" aria-label="Mobile menu switcher" width="32" height="22">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
+
         <nav class="header-nav">
           <ul class="header-nav-list">
             <li class="header-nav-item">
@@ -66,6 +77,68 @@
           </li>
         </ul>
       </div>
+
+      <!-- MOBILE MENU -->
+
+      <div class="container menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="btn-menu-icon" aria-label="Mobile menu switcher" width="8" height="8">
+            <use class="icon-close" href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+          <li class="mobile-item">
+            <a class="mobile-link link" href="./index.html">Studio</a>
+          </li>
+
+          <li class="mobile-item">
+            <a class="mobile-link link" href="./portfolio.html">Portfolio</a>
+          </li>
+
+          <li class="mobile-item">
+            <a class="mobile-link link current" href="#">Contacts</a>
+          </li>
+        </ul>
+        <ul class="mobile-contacts list">
+          <li class="item">
+            <a class="link link-tel" href="tel:110001111111"> +11 (000) 111-11-11 </a>
+          </li>
+          <li class="item">
+            <a class="link link-mail" href="mailto:info@devstudio.com"> info@devstudio.com </a>
+          </li>
+        </ul>
+        <ul class="social-list list">
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <!-- MAIN INFORMATION -->
@@ -74,7 +147,7 @@
       <!-- Hero section -->
 
       <section class="hero">
-        <div class="container">
+        <div class="container hero-wrap">
           <h1 class="hero-title centered">Effective Solutions for Your Business</h1>
           <button class="btn btn-hero centered" data-modal-open type="button">Order Service</button>
         </div>
@@ -86,7 +159,7 @@
         <div class="container">
           <h2 class="title visually-hidden">About us</h2>
           <ul class="skills-list">
-            <li class="item icon-antenna">
+            <li class="skills-item icon-antenna">
               <h3 class="subtitle">Strategy</h3>
               <p class="text">
                 Our goal is to identify the business problem to walk away with the perfect and
@@ -94,21 +167,21 @@
               </p>
             </li>
 
-            <li class="item icon-clock">
+            <li class="skills-item icon-clock">
               <h3 class="subtitle">Punctuality</h3>
               <p class="text">
                 Bring the key message to the brand's audience for the best price within the shortest
                 possible time.
               </p>
             </li>
-            <li class="item icon-diagram">
+            <li class="skills-item icon-diagram">
               <h3 class="subtitle">Diligence</h3>
               <p class="text">
                 Research and confirm brands that present the strongest digital growth opportunities
                 and minimize risk.
               </p>
             </li>
-            <li class="item icon-astronaut">
+            <li class="skills-item icon-astronaut">
               <h3 class="subtitle">Technologies</h3>
               <p class="text">
                 Design practice focused on digital experiences. We bring forth a deep passion for
@@ -168,8 +241,8 @@
               />
 
               <div class="team-content">
-                <h3 class="subtitle text-center">Mark Guerrero</h3>
-                <p class="text text-center">Product Designer</p>
+                <h3 class="subtitle-card">Mark Guerrero</h3>
+                <p class="text-card">Product Designer</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a
@@ -237,8 +310,8 @@
               />
 
               <div class="team-content">
-                <h3 class="subtitle text-center">Tom Ford</h3>
-                <p class="text text-center">Frontend Developer</p>
+                <h3 class="subtitle-card">Tom Ford</h3>
+                <p class="text-card">Frontend Developer</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a
@@ -306,8 +379,8 @@
               />
 
               <div class="team-content">
-                <h3 class="subtitle text-center">Camila Garcia</h3>
-                <p class="text text-center">Marketing</p>
+                <h3 class="subtitle-card">Camila Garcia</h3>
+                <p class="text-card">Marketing</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a
@@ -375,8 +448,8 @@
               />
 
               <div class="team-content">
-                <h3 class="subtitle text-center">Daniel Wilson</h3>
-                <p class="text text-center">UI Designer</p>
+                <h3 class="subtitle-card">Daniel Wilson</h3>
+                <p class="text-card">UI Designer</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a
@@ -597,7 +670,7 @@
       <div class="modal">
         <button class="modal-btn" data-modal-close type="button">
           <svg class="modal-close-icon" width="8px" height="8px">
-            <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+            <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
 
@@ -676,6 +749,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/body-scroll-lock@4.0.0-beta.0/lib/bodyScrollLock.min.js"></script>
+    <script src="./js/mobile-menu.js" defer></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
